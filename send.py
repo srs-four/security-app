@@ -1,10 +1,9 @@
-import os
-import smtplib
-
 def sendr():
-    recipient = os.environ['RECIPIENT']
-    username = os.environ['USERNAME']
-    password = os.environ['PASSWORD']
+    import smtplib
+
+    recipient = "shahidmmed@gmail.com"
+    username = "mysecurwork@gmail.com"
+    password = "dCAhvL9jYdK2rMPck7xVNsq"
     if username and password:
     # Connect to the server and send an emails
         server = smtplib.SMTP("smtp.gmail.com", 587)
@@ -13,3 +12,4 @@ def sendr():
 
         msg = "Intruder Alert!"
         server.sendmail(username, recipient, msg)
+        
